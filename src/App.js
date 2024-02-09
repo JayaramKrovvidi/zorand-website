@@ -1,24 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
+import "tailwindcss/lib/css/preflight.css"
+import GlobalStyles from 'styles/GlobalStyles';
+import AgencyLandingPage from 'demos/AgencyLandingPage';
+import ComponentRenderer from 'ComponentRenderer';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <GlobalStyles />
+      <Router>
+        <Routes>
+          {/* <Route path="/components/:type/:subtype/:name" element={<ComponentRenderer />} />
+          <Route path="/components/:type/:name" element={<ComponentRenderer />} /> */}
+          <Route path="/:pageName" element={<ComponentRenderer />} />
+          <Route path="/" element={<AgencyLandingPage />} />
+        </Routes>
+      </Router>
+    </>
   );
 }
 

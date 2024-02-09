@@ -65,14 +65,34 @@ export default () => {
   const cards = [
     {
       imageSrc: ShieldIconImage,
-      title: "Ads Management",
-      description: "We create and manage ads that you need, from creation to deployment. Lorem ipsum donor sit amet consicou."
+      title: "Keyword Research and Audience Targeting",
+      description: "We specialize in identifying the most relevant keywords for your business and target audience, ensuring your ads reach the right customers."
     },
-    { imageSrc: SupportIconImage, title: "Video Marketing" },
-    { imageSrc: CustomizeIconImage, title: "Customer Relation" },
-    { imageSrc: ReliableIconImage, title: "Product Outreach" },
-    { imageSrc: FastIconImage, title: "PR Campaign" },
-    { imageSrc: SimpleIconImage, title: "Product Expansion" }
+    {
+      imageSrc: CustomizeIconImage,
+      title: " Ad Creation and Ad Copywriting",
+      description: " Our team excels in crafting compelling ad copy that attracts potential customers while setting up tailored Google Ads campaigns to meet your goals."    
+    },
+    {
+      imageSrc: SimpleIconImage,
+      title: "Ad Visibility and User Experience",
+      description: " Enhance your ad visibility and user experience by utilizing ad extensions and ensuring landing page optimization to align with ad goals."
+    },
+    {
+      imageSrc: ReliableIconImage,
+      title: "Budget Management and ROI",
+      description: "We manage your budget effectively and ensure a high return on investment by optimizing your ad campaigns and targeting the right audience."
+    },
+    {
+      imageSrc: FastIconImage,
+      title: "Campaign Performance and Competitor Analysis",
+      description: "Continuously improve your ad campaigns and stay competitive within your industry with our campaign optimization and competitor analysis services."
+    },
+    {
+      imageSrc: SupportIconImage,
+      title: "Multichannel Advertising and Remarketing",
+      description: "Expand reach with Google Display ads, videos on multiple platforms, and retargeting engaged users, all while receiving ongoing customer support."
+    }
   ];
 
   return (

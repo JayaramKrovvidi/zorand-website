@@ -52,7 +52,7 @@ export default ({
       We have the most <span tw="text-primary-500">professional</span> marketing team.
     </>
   ),
-  description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+  description = "We specialize in crafting impactful content strategies for corporate brands, rooted in our tried-and-true SEM methodology. With a proven track record in results driven digital marketing campaigns, our customer centric approach ensures success",
   primaryButtonText = "See Our Portfolio",
   primaryButtonUrl = "https://timerse.com",
   features = null,

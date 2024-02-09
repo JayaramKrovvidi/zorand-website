@@ -28,7 +28,7 @@ const LeftColumn = tw.div`flex flex-col items-center lg:block`;
 const RightColumn = tw.div`w-full sm:w-5/6 lg:w-1/2 mt-16 lg:mt-0 lg:pl-8`;
 
 const Heading = styled.h1`
-  ${tw`text-3xl text-center lg:text-left sm:text-4xl lg:text-5xl xl:text-6xl font-black text-gray-100 leading-none`}
+  ${tw`text-3xl text-center lg:text-left sm:text-3xl lg:text-4xl xl:text-5xl font-black text-gray-100 leading-none`}
   span {
     ${tw`inline-block mt-2`}
   }
@@ -59,21 +59,21 @@ export default () => {
   const navLinks = [
     <NavLinks key={1}>
       <NavLink href="#">
-        About
+        Home
+      </NavLink>
+      <NavLink href="#">
+        Services
+      </NavLink>
+      <NavLink href="#">
+        About Us
       </NavLink>
       <NavLink href="#">
         Blog
       </NavLink>
-      <NavLink href="#">
-        Locations
-      </NavLink>
-      <NavLink href="#">
-        Pricing
-      </NavLink>
     </NavLinks>,
     <NavLinks key={2}>
       <PrimaryLink href="/#">
-        Hire Us
+        Contact Us
       </PrimaryLink>
     </NavLinks>
   ];
@@ -85,11 +85,11 @@ export default () => {
         <StyledHeader links={navLinks} />
         <TwoColumn>
           <LeftColumn>
-            <Notification>We have now launched operations in Europe.</Notification>
             <Heading>
-              <span>Hire the best</span>
+              <span>Empowering Dawn in</span>
               <br />
-              <SlantedBackground>Marketing Team.</SlantedBackground>
+              <SlantedBackground>Digital Marketing</SlantedBackground>
+              <Notification>Driving Results Through Innovative Strategies</Notification>
             </Heading>
             <PrimaryAction>Read Customer Stories</PrimaryAction>
           </LeftColumn>

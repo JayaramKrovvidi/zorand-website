@@ -40,13 +40,14 @@ const DecoratorBlob = styled(SvgDotPattern)(props => [
 ]);
 
 export default ({
-  subheading = "Our Track Record",
+  subheading = "Our Mission",
   heading = (
     <>
-      We have been doing this <wbr /> since <span tw="text-primary-500">1999.</span>
+    
+      We are <wbr /> <span tw="text-primary-500">COMMITTED.</span>
     </>
   ),
-  description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+  description = "Zorand's vision is to be the  digital dawn, illuminating the  path for businesses to excel ethically and innovatively in the digital landscape. We are unwavering in our commitment to setting new industry standards and delivering precise results. As a game-changing force in digital marketing, we catalyze unprecedented growth and success for our clients.",
   primaryButtonText = "Learn More",
   primaryButtonUrl = "https://timerse.com",
   imageSrc = StatsIllustrationSrc,
