@@ -8,13 +8,11 @@ import { SectionHeading } from "components/misc/Headings.js";
 import defaultCardImage from "../../images/shield-icon.svg";
 
 import { ReactComponent as SvgDecoratorBlob3 } from "../../images/svg-decorator-blob-3.svg";
-
-import SupportIconImage from "../../images/support-icon.svg";
 import ShieldIconImage from "../../images/shield-icon.svg";
 import CustomizeIconImage from "../../images/customize-icon.svg";
-import FastIconImage from "../../images/fast-icon.svg";
 import ReliableIconImage from "../../images/reliable-icon.svg";
 import SimpleIconImage from "../../images/simple-icon.svg";
+import { Element } from "react-scroll";
 
 const Container = tw.div`relative`;
 
@@ -24,11 +22,11 @@ const ThreeColumnContainer = styled.div`
 const Heading = tw(SectionHeading)`w-full`;
 
 const Column = styled.div`
-  ${tw`md:w-1/2 lg:w-1/3 px-6 flex`}
+  ${tw`md:w-1/2 px-6 flex`}
 `;
 
 const Card = styled.div`
-  ${tw`flex flex-col mx-auto max-w-xs items-center px-6 py-10 border-2 border-dashed border-primary-500 rounded-lg mt-12`}
+  ${tw`flex flex-col mx-auto max-w-xl items-center px-4 py-10 border-2 border-dashed border-primary-500 rounded-lg mt-12`}
   .imageContainer {
     ${tw`border-2 border-primary-500 text-center rounded-full p-6 flex-shrink-0 relative`}
     img {
@@ -65,57 +63,49 @@ export default () => {
   const cards = [
     {
       imageSrc: ShieldIconImage,
-      title: "Keyword Research and Audience Targeting",
-      description: "We specialize in identifying the most relevant keywords for your business and target audience, ensuring your ads reach the right customers."
+      title: "SEO and Web Development",
+      description: "Boost your online success with our SEO and web development services. Our team creates user-friendly websites optimized for high search engine rankings. Our proven SEO strategies guarantee greater visibility and more organic traffic. Let's work together to enhance your online presence and drive business growth!"
     },
     {
       imageSrc: CustomizeIconImage,
-      title: " Ad Creation and Ad Copywriting",
-      description: " Our team excels in crafting compelling ad copy that attracts potential customers while setting up tailored Google Ads campaigns to meet your goals."    
-    },
-    {
-      imageSrc: SimpleIconImage,
-      title: "Ad Visibility and User Experience",
-      description: " Enhance your ad visibility and user experience by utilizing ad extensions and ensuring landing page optimization to align with ad goals."
+      title: "Google Ads Mastery",
+      description: "Elevate your Google Ads performance with our proven strategy. Our experts craft captivating ads that enhance conversions and amplify ROI. Leverage our expertise and Google's network for optimal business success"
     },
     {
       imageSrc: ReliableIconImage,
-      title: "Budget Management and ROI",
-      description: "We manage your budget effectively and ensure a high return on investment by optimizing your ad campaigns and targeting the right audience."
+      title: "Social Medial Marketing",
+      description: "Our Social Media Marketing experts are here to help you revolutionize your online presence! With our cutting-edge strategies, we can build brand awareness and foster customer engagement that genuinely resonates with your audience. Let's work together to harness the power of social media and transform your followers into loyal customers!"
     },
     {
-      imageSrc: FastIconImage,
-      title: "Campaign Performance and Competitor Analysis",
-      description: "Continuously improve your ad campaigns and stay competitive within your industry with our campaign optimization and competitor analysis services."
-    },
-    {
-      imageSrc: SupportIconImage,
-      title: "Multichannel Advertising and Remarketing",
-      description: "Expand reach with Google Display ads, videos on multiple platforms, and retargeting engaged users, all while receiving ongoing customer support."
+      imageSrc: SimpleIconImage,
+      title: "Brand Solution & Strategy",
+      description: "Elevate your brand with our robust solutions and enlightening market research. Our expertise lies in brand strategy supported by in-depth case study analysis and market intelligence. Our approach guarantees an individualized brand identity that connects with your audience, fuelling expansion and cultivating devotion through informed choices."
     }
   ];
 
   return (
-    <Container>
-      <ThreeColumnContainer>
-        <Heading>Our Professional <span tw="text-primary-500">Services</span></Heading>
-        {cards.map((card, i) => (
-          <Column key={i}>
-            <Card>
-              <span className="imageContainer">
-                <img src={card.imageSrc || defaultCardImage} alt="" />
-              </span>
-              <span className="textContainer">
-                <span className="title">{card.title || "Fully Secure"}</span>
-                <p className="description">
-                  {card.description || "Lorem ipsum donor amet siti ceali ut enim ad minim veniam, quis nostrud. Sic Semper Tyrannis. Neoas Calie artel."}
-                </p>
-              </span>
-            </Card>
-          </Column>
-        ))}
-      </ThreeColumnContainer>
-      <DecoratorBlob />
-    </Container>
+    <Element name="services">
+      <Container>
+        <ThreeColumnContainer>
+          <Heading>Our Professional <span tw="text-primary-500">Services</span></Heading>
+          {cards.map((card, i) => (
+            <Column key={i}>
+              <Card>
+                <span className="imageContainer">
+                  <img src={card.imageSrc || defaultCardImage} alt="" />
+                </span>
+                <span className="textContainer">
+                  <span className="title">{card.title || "Fully Secure"}</span>
+                  <p className="description">
+                    {card.description || "Lorem ipsum donor amet siti ceali ut enim ad minim veniam, quis nostrud. Sic Semper Tyrannis. Neoas Calie artel."}
+                  </p>
+                </span>
+              </Card>
+            </Column>
+          ))}
+        </ThreeColumnContainer>
+        <DecoratorBlob />
+      </Container>
+    </Element>
   );
 };

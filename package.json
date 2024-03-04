@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.16.7",
     "@testing-library/jest-dom": "^5.16.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^14.4.3",
@@ -16,6 +17,7 @@
     "react-rnd": "^10.3.7",
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
+    "react-scroll": "^1.9.0",
     "react-slick": "^0.29.0",
     "slick-carousel": "^1.8.1",
     "styled-components": "^5.3.5",
@@ -26,9 +28,10 @@
   "scripts": {
     "start": "react-scripts --openssl-legacy-provider start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts --openssl-legacy-provide test",
     "eject": "react-scripts eject",
-    "deploy": "yarn build && netlify deploy --prod --dir=build"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app",
@@ -54,5 +57,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@emailjs/browser": "^4.2.0",
+    "gh-pages": "^6.1.1",
+    "react-phone-number-input": "^3.3.9"
   }
 }

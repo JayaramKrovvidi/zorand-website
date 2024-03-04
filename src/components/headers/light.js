@@ -9,6 +9,7 @@ import useAnimatedNavToggler from "../../helpers/useAnimatedNavToggler.js";
 import logo from "../../images/logo-light.png";
 import { ReactComponent as MenuIcon } from "feather-icons/dist/icons/menu.svg";
 import { ReactComponent as CloseIcon } from "feather-icons/dist/icons/x.svg";
+import { Link } from "react-scroll";
 
 const Header = tw.header`
   flex justify-between items-center
@@ -20,7 +21,7 @@ export const NavLinks = tw.div`inline-block`;
 /* hocus: stands for "on hover or focus"
  * hocus:bg-primary-700 will apply the bg-primary-700 class on hover or focus
  */
-export const NavLink = tw.a`
+export const NavLink = tw(Link)`
   text-lg my-2 lg:text-sm lg:mx-6 lg:my-0
   font-semibold tracking-wide transition duration-300
   pb-1 border-b-2 border-transparent hover:border-primary-500 hocus:text-primary-500
@@ -72,14 +73,13 @@ export default ({ roundedHeaderButton = false, logoLink, links, className, colla
    */
   const defaultLinks = [
     <NavLinks key={1}>
-      <NavLink href="/#">About</NavLink>
-      <NavLink href="/#">Blog</NavLink>
-      <NavLink href="/#">Pricing</NavLink>
-      <NavLink href="/#">Contact Us</NavLink>
-      <NavLink href="/#" tw="lg:ml-12!">
-        Login
-      </NavLink>
-      <PrimaryLink css={roundedHeaderButton && tw`rounded-full`}href="/#">Sign Up</PrimaryLink>
+      <NavLink to="home" smooth={true} duration={500}>Home</NavLink>
+      <NavLink to="about" smooth={true} duration={700}>About Us</NavLink>
+      <NavLink to="why-us" smooth={true} duration={900}>Why Us?</NavLink>
+      <NavLink to="services" smooth={true} duration={1100}>Services</NavLink>
+      <PrimaryLink to="contact-us" smooth={true} duration={1200} css={roundedHeaderButton && tw`rounded-full`} href="/#">
+        Contact Us
+      </PrimaryLink>
     </NavLinks>
   ];
 

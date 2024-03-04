@@ -2,9 +2,8 @@ import React from "react";
 import tw from "twin.macro";
 import styled from "styled-components";
 import { css } from "styled-components/macro"; //eslint-disable-line
-
-import Header, { NavLink, NavLinks, PrimaryLink, LogoLink, NavToggle, DesktopNavLinks } from "../headers/light.js";
-import ResponsiveVideoEmbed from "../../helpers/ResponsiveVideoEmbed.js";
+import Header, { NavLink, LogoLink, NavToggle, DesktopNavLinks } from "../headers/light.js";
+import { Element } from "react-scroll";
 
 const StyledHeader = styled(Header)`
   ${tw`pt-8 max-w-none`}
@@ -42,65 +41,30 @@ const SlantedBackground = styled.span`
   }
 `;
 
-const Notification = tw.span`inline-block my-4 pl-3 py-1 text-gray-100 border-l-4 border-blue-500 font-medium text-sm`;
-
-const PrimaryAction = tw.button`px-8 py-3 mt-10 text-sm sm:text-base sm:mt-16 sm:px-8 sm:py-4 bg-gray-100 text-primary-500 font-bold rounded shadow transition duration-300 hocus:bg-primary-500 hocus:text-gray-100 focus:shadow-outline`;
-
-const StyledResponsiveVideoEmbed = styled(ResponsiveVideoEmbed)`
-  padding-bottom: 56.25% !important;
-  padding-top: 0px !important;
-  ${tw`rounded`}
-  iframe {
-    ${tw`rounded bg-black shadow-xl`}
-  }
-`;
+const Notification = tw.span`inline-block my-4 pl-3 py-1 text-gray-100 border-l-4 border-blue-500 font-medium text-xl`;
 
 export default () => {
-  const navLinks = [
-    <NavLinks key={1}>
-      <NavLink href="#">
-        Home
-      </NavLink>
-      <NavLink href="#">
-        Services
-      </NavLink>
-      <NavLink href="#">
-        About Us
-      </NavLink>
-      <NavLink href="#">
-        Blog
-      </NavLink>
-    </NavLinks>,
-    <NavLinks key={2}>
-      <PrimaryLink href="/#">
-        Contact Us
-      </PrimaryLink>
-    </NavLinks>
-  ];
 
   return (
-    <Container>
-      <OpacityOverlay />
-      <HeroContainer>
-        <StyledHeader links={navLinks} />
-        <TwoColumn>
-          <LeftColumn>
-            <Heading>
-              <span>Empowering Dawn in</span>
-              <br />
-              <SlantedBackground>Digital Marketing</SlantedBackground>
-              <Notification>Driving Results Through Innovative Strategies</Notification>
-            </Heading>
-            <PrimaryAction>Read Customer Stories</PrimaryAction>
-          </LeftColumn>
-          <RightColumn>
-            <StyledResponsiveVideoEmbed
-              url="//player.vimeo.com/video/374265101?title=0&portrait=0&byline=0&autoplay=0&responsive=1"
-              background="transparent"
-            />
-          </RightColumn>
-        </TwoColumn>
-      </HeroContainer>
-    </Container>
+    <Element name="home">
+      <Container>
+        <OpacityOverlay />
+        <HeroContainer>
+          <StyledHeader />
+          <TwoColumn>
+            <LeftColumn>
+              <Heading>
+                <span>Empowering Business to</span>
+                <br />
+                <SlantedBackground>Conquer the Digital Frontier</SlantedBackground>
+                <Notification>Unlocking Success, One Buck at a Time</Notification>
+              </Heading>
+            </LeftColumn>
+            <RightColumn>
+            </RightColumn>
+          </TwoColumn>
+        </HeroContainer>
+      </Container>
+    </Element>
   );
 };

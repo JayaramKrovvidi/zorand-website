@@ -1,6 +1,6 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import AnimationRevealPage from "helpers/AnimationRevealPage.js"
+// import AnimationRevealPage from "helpers/AnimationRevealPage.js"
 
 import EventLandingPage from "demos/EventLandingPage.js";
 import HotelTravelLandingPage from "demos/HotelTravelLandingPage.js";
